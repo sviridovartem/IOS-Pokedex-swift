@@ -35,9 +35,13 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mtm-uL-hUu">
-                                        <rect key="frame" x="539" y="3" width="34" height="49"/>
-                                        <state key="normal" title="Button" image="riff"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mtm-uL-hUu">
+                                        <rect key="frame" x="551" y="3" width="34" height="49"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="49" id="BJ6-w2-srL"/>
+                                            <constraint firstAttribute="width" constant="34" id="uxK-I0-Fzp"/>
+                                        </constraints>
+                                        <state key="normal" image="riff"/>
                                         <connections>
                                             <action selector="musicBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yFp-gC-GLJ"/>
                                         </connections>
@@ -45,8 +49,10 @@
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.25886097826894816" blue="0.42449745703033792" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="mtm-uL-hUu" secondAttribute="trailing" constant="15" id="PIr-Kb-wQr"/>
                                     <constraint firstItem="ssi-x1-h8F" firstAttribute="centerY" secondItem="cVk-jS-6qu" secondAttribute="centerY" id="PTM-hD-8Wn"/>
                                     <constraint firstItem="ssi-x1-h8F" firstAttribute="centerX" secondItem="cVk-jS-6qu" secondAttribute="centerX" id="SIJ-FB-IgT"/>
+                                    <constraint firstItem="mtm-uL-hUu" firstAttribute="top" secondItem="cVk-jS-6qu" secondAttribute="top" constant="3" id="Wb5-Sv-RlI"/>
                                     <constraint firstAttribute="height" constant="56" id="oFf-TG-GW2"/>
                                 </constraints>
                             </view>
