@@ -59,6 +59,14 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="wallpaper-1" translatesAutoresizingMaskIntoConstraints="NO" id="vhh-7M-bFp">
                                 <rect key="frame" x="0.0" y="57" width="600" height="543"/>
                             </imageView>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="rmT-9J-V97">
+                                <rect key="frame" x="0.0" y="56" width="600" height="44"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="rmb-n4-f4q"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="QKu-aJ-jV1">
                                 <rect key="frame" x="20" y="120" width="560" height="460"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -112,14 +120,6 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="rmT-9J-V97">
-                                <rect key="frame" x="0.0" y="56" width="600" height="44"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="rmb-n4-f4q"/>
-                                </constraints>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -142,11 +142,30 @@
                     <connections>
                         <outlet property="collection" destination="QKu-aJ-jV1" id="GJH-dQ-1g4"/>
                         <outlet property="searchBar" destination="rmT-9J-V97" id="4B6-Hj-iZX"/>
+                        <segue destination="mNN-Bm-Yyf" kind="show" identifier="PokemonDetailVC" id="kob-IH-Jte"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="184" y="458"/>
+        </scene>
+        <!--Pokemon DetailVC-->
+        <scene sceneID="a5i-zx-sof">
+            <objects>
+                <viewController id="mNN-Bm-Yyf" customClass="PokemonDetailVC" customModule="Pokedex_by_Sviridov" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VhS-fO-O6j"/>
+                        <viewControllerLayoutGuide type="bottom" id="zI9-Ur-IDL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IGQ-Y1-9vi">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hP7-Bw-xSP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="939" y="458"/>
         </scene>
     </scenes>
     <resources>
